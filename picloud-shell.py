@@ -10,7 +10,12 @@ def sys(cmd) :
   return Popen(cmd, stdout=PIPE, shell=True).communicate()[0]
 
 def cloudsys(cmd) :
-  print cloud.result(cloud.call(sys, cmd))
+  print cloud.result(cloud.call(sys, cmd)),
+
+from sys import argv
+if len(argv) > 1 :
+  cloudsys(' '.join(argv[1:]))
+  exit()
 
 from sys import stdin
 while True :

@@ -2,6 +2,18 @@ a super simple shell for picloud.
 
 Make sure that your environment has PICLOUD_KEY and PICLOUD_SECRET defined
 
+examples:
+
+    local$ ./picloud-shell.py
+    $ pwd
+    /home/emp9
+    $ echo "hello world" > shared/file
+    $ CTRL+C
+    local$ ./picloud-shell.py cat shared/file
+    hello world
+    local$ ./picloud-shell.py "cd shared; cat file"
+    hello world
+
 cd doesn't work because your environment isn't saved between executions.
 however, you can do stuff like this:
 
