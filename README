@@ -1,1 +1,15 @@
-a super simple shell for picloud
+a super simple shell for picloud.
+
+Make sure that your environment has PICLOUD_KEY and PICLOUD_SECRET defined
+
+cd doesn't work because your environment isn't saved between executions.
+however, you can do stuff like this:
+
+cd shared; echo "hello world" > file; cat file
+
+I tried to fix this by saving the environment between calls, but it isn't
+simple.
+
+TODO:
+* allow & symbol to wait to return results
+* allow fake cd

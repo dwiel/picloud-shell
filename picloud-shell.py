@@ -6,6 +6,7 @@ cloud.setkey(os.environ['PICLOUD_KEY'], os.environ['PICLOUD_SECRET'])
 
 def sys(cmd) :
   from subprocess import Popen, PIPE
+
   return Popen(cmd, stdout=PIPE, shell=True).communicate()[0]
 
 def cloudsys(cmd) :
